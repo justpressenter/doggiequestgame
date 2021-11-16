@@ -4,6 +4,26 @@ enum ActionKind {
     Jumping,
     walkleft
 }
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (doggiedir == "right") {
+        animation.runImageAnimation(
+        mySprite,
+        assets.animation`dogWalkRight`,
+        100,
+        true
+        )
+    } else {
+        animation.runImageAnimation(
+        mySprite,
+        assets.animation`myAnim`,
+        100,
+        true
+        )
+    }
+})
+controller.down.onEvent(ControllerButtonEvent.Released, function () {
+    animation.stopAnimation(animation.AnimationTypes.All, mySprite)
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     doggiedir = "left"
     animation.runImageAnimation(
@@ -28,6 +48,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+controller.up.onEvent(ControllerButtonEvent.Released, function () {
+    animation.stopAnimation(animation.AnimationTypes.All, mySprite)
+})
 controller.combos.attachCombo("UUDDLRLRBA", function () {
     game.showLongText("no text here yet", DialogLayout.Bottom)
 })
@@ -39,6 +62,23 @@ function namedoggie () {
         namedoggie()
     }
 }
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (doggiedir == "right") {
+        animation.runImageAnimation(
+        mySprite,
+        assets.animation`dogWalkRight`,
+        100,
+        true
+        )
+    } else {
+        animation.runImageAnimation(
+        mySprite,
+        assets.animation`myAnim`,
+        100,
+        true
+        )
+    }
+})
 let doggiename = ""
 let doggiedir = ""
 let mySprite: Sprite = null
