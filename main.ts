@@ -167,9 +167,4 @@ scene.setBackgroundImage(img`
     `)
 game.showLongText("Hello there! I am Mr. Popup Box. (I know, I know, It's a very fitting name.)", DialogLayout.Bottom)
 namedoggie()
-story.spriteSayText(mySprite, "bark")
 controller.moveSprite(mySprite)
-// triggerable forever loop
-while (true) {
-	
-}
