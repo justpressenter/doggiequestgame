@@ -7,7 +7,9 @@
         "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24",
         "controller": "*",
         "animation": "*",
-        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3"
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
+        "arcade-text": "github:microsoft/arcade-text#v1.3.0",
+        "block-menu": "github:riknoll/arcade-custom-menu#v0.0.1"
     },
     "files": [
         "main.blocks",
@@ -15,7 +17,10 @@
         "README.md",
         "assets.json",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        null,
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
